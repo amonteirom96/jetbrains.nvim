@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500">
+<clipPath id="clipLIGHT"><rect x="20" y="20" width="610" height="460" rx="14"/></clipPath>
+<g font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,monospace" font-size="15" clip-path="url(#clipLIGHT)">
+<rect x="20" y="20" width="610" height="460" rx="14" fill="#ffffff"/>
+<rect x="20" y="56" width="610" height="1" fill="#dfe1e5"/>
+<text x="42" y="44" fill="#080808"><tspan fill="#3574f0" font-weight="700">C</tspan> Greeter.java</text>
+<rect x="34" y="54" width="138" height="3" rx="1.5" fill="#3574f0"/>
+<text x="192" y="44" fill="#818594"><tspan fill="#834df0" font-weight="700">K</tspan> Main.kt</text>
+<text x="614" y="44" fill="#818594" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="end" letter-spacing="2">LIGHT</text>
+<text x="56" y="85" text-anchor="end" fill="#aeb3c2">1</text>
+<text x="72" y="85" fill="#080808" xml:space="preserve"><tspan fill="#9e880d">@Service</tspan></text>
+<text x="56" y="111" text-anchor="end" fill="#aeb3c2">2</text>
+<text x="72" y="111" fill="#080808" xml:space="preserve"><tspan fill="#0033b3">public class</tspan> Greeter {</text>
+<rect x="64" y="120" width="3" height="26" fill="#88adf7"/>
+<text x="56" y="137" text-anchor="end" fill="#aeb3c2">3</text>
+<text x="72" y="137" fill="#080808" xml:space="preserve">    <tspan fill="#0033b3">private static final int</tspan> <tspan fill="#871094" font-style="italic">MAX</tspan> = <tspan fill="#1750eb">3</tspan>;</text>
+<rect x="64" y="146" width="3" height="26" fill="#7fc784"/>
+<text x="56" y="163" text-anchor="end" fill="#aeb3c2">4</text>
+<text x="72" y="163" fill="#080808" xml:space="preserve">    <tspan fill="#0033b3">private final</tspan> String <tspan fill="#871094">name</tspan> = <tspan fill="#067d17">"World"</tspan>;</text>
+<text x="56" y="189" text-anchor="end" fill="#aeb3c2">5</text>
+<text x="72" y="189" fill="#080808" xml:space="preserve"></text>
+<rect x="64" y="198" width="3" height="26" fill="#7fc784"/>
+<text x="56" y="215" text-anchor="end" fill="#aeb3c2">6</text>
+<text x="72" y="215" fill="#080808" xml:space="preserve"><tspan fill="#8c8c8c" font-style="italic">    /** Greets the caller. */</tspan></text>
+<rect x="64" y="224" width="3" height="26" fill="#7fc784"/>
+<text x="56" y="241" text-anchor="end" fill="#aeb3c2">7</text>
+<text x="72" y="241" fill="#080808" xml:space="preserve">    <tspan fill="#0033b3">public</tspan> String <tspan fill="#00627a">greet</tspan>(<tspan fill="#0033b3">int</tspan> times) {</text>
+<text x="56" y="267" text-anchor="end" fill="#aeb3c2">8</text>
+<text x="72" y="267" fill="#080808" xml:space="preserve"><tspan fill="#8c8c8c" font-style="italic">        // </tspan><tspan fill="#008dde" font-style="italic">TODO: cache the result</tspan></text>
+<rect x="20" y="276" width="610" height="26" fill="#f5f8fe"/>
+<text x="56" y="293" text-anchor="end" fill="#767a8a">9</text>
+<text x="72" y="293" fill="#080808" xml:space="preserve">        <tspan fill="#0033b3">return</tspan> <tspan fill="#871094">name</tspan>.<tspan fill="#cc3645">re</tspan></text>
+<text x="56" y="319" text-anchor="end" fill="#aeb3c2">10</text>
+<text x="72" y="319" fill="#080808" xml:space="preserve">    }</text>
+<text x="56" y="345" text-anchor="end" fill="#aeb3c2">11</text>
+<text x="72" y="345" fill="#080808" xml:space="preserve">}</text>
+<rect x="252" y="280" width="2" height="18" fill="#000000"/>
+<path d="M234 298 q2 -3 4 0 t4 0 t4 0 t4 0" fill="none" stroke="#cc3645" stroke-width="1.3"/>
+<rect x="279" y="279" width="270" height="20" rx="4" fill="#faebec"/>
+<text x="287" y="293" fill="#cc3645" xml:space="preserve">■ Cannot resolve symbol &apos;re&apos;</text>
+<rect x="204" y="304" width="360" height="132" rx="8" fill="#ffffff" stroke="#b9bdc9"/>
+<rect x="208" y="310" width="352" height="24" rx="4" fill="#d4e2ff"/>
+<circle cx="222" cy="322" r="8" fill="#c7dce2"/>
+<text x="222" y="326" fill="#00627a" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="238" y="327" fill="#080808"><tspan fill="#3574f0" font-weight="700">re</tspan>peat<tspan fill="#818594">(int count)</tspan></text>
+<text x="552" y="327" fill="#818594" text-anchor="end" font-size="13">String</text>
+<circle cx="222" cy="346" r="8" fill="#c7dce2"/>
+<text x="222" y="350" fill="#00627a" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="238" y="351" fill="#080808"><tspan fill="#3574f0" font-weight="700">re</tspan>place<tspan fill="#818594">(char, char)</tspan></text>
+<text x="552" y="351" fill="#818594" text-anchor="end" font-size="13">String</text>
+<circle cx="222" cy="370" r="8" fill="#c7dce2"/>
+<text x="222" y="374" fill="#00627a" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="238" y="375" fill="#080808"><tspan fill="#3574f0" font-weight="700">re</tspan>gionMatches<tspan fill="#818594">(int, …)</tspan></text>
+<text x="552" y="375" fill="#818594" text-anchor="end" font-size="13">boolean</text>
+<circle cx="222" cy="394" r="8" fill="#c7dce2"/>
+<text x="222" y="398" fill="#00627a" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="238" y="399" fill="#080808"><tspan fill="#3574f0" font-weight="700">re</tspan>solveConstantDesc<tspan fill="#818594">(Lookup)</tspan></text>
+<text x="552" y="399" fill="#818594" text-anchor="end" font-size="13">String</text>
+<circle cx="222" cy="418" r="8" fill="#e5cae7"/>
+<text x="222" y="422" fill="#871094" font-size="11" font-weight="700" text-anchor="middle">f</text>
+<text x="238" y="423" fill="#080808"><tspan fill="#3574f0" font-weight="700">re</tspan>sult<tspan fill="#818594"></tspan></text>
+<text x="552" y="423" fill="#818594" text-anchor="end" font-size="13">int</text>
+<rect x="20" y="448" width="610" height="32" fill="#f7f8fa"/>
+<rect x="20" y="448" width="610" height="1" fill="#dfe1e5"/>
+<rect x="20" y="448" width="62" height="32" fill="#3574f0"/>
+<text x="36" y="469" fill="#ffffff" font-weight="700">NOR</text>
+<text x="96" y="469" fill="#818594" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13">greeter  ›  src  ›  <tspan fill="#080808">Greeter</tspan>  ›  <tspan fill="#080808">greet</tspan></text>
+<text x="614" y="469" fill="#818594" text-anchor="end" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13"><tspan fill="#cc3645">● 1</tspan>   9:23   LF   UTF-8</text>
+</g>
+<rect x="20" y="20" width="610" height="460" rx="14" fill="none" stroke="#b9bdc9"/>
+<clipPath id="clipDARK"><rect x="650" y="20" width="610" height="460" rx="14"/></clipPath>
+<g font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,monospace" font-size="15" clip-path="url(#clipDARK)">
+<rect x="650" y="20" width="610" height="460" rx="14" fill="#1e1f22"/>
+<rect x="650" y="56" width="610" height="1" fill="#393b40"/>
+<text x="672" y="44" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">C</tspan> Greeter.java</text>
+<rect x="664" y="54" width="138" height="3" rx="1.5" fill="#3574f0"/>
+<text x="822" y="44" fill="#868a91"><tspan fill="#a571e6" font-weight="700">K</tspan> Main.kt</text>
+<text x="1244" y="44" fill="#868a91" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13" text-anchor="end" letter-spacing="2">DARK</text>
+<text x="686" y="85" text-anchor="end" fill="#4b5059">1</text>
+<text x="702" y="85" fill="#bcbec4" xml:space="preserve"><tspan fill="#b3ae60">@Service</tspan></text>
+<text x="686" y="111" text-anchor="end" fill="#4b5059">2</text>
+<text x="702" y="111" fill="#bcbec4" xml:space="preserve"><tspan fill="#cf8e6d">public class</tspan> Greeter {</text>
+<rect x="694" y="120" width="3" height="26" fill="#375fad"/>
+<text x="686" y="137" text-anchor="end" fill="#4b5059">3</text>
+<text x="702" y="137" fill="#bcbec4" xml:space="preserve">    <tspan fill="#cf8e6d">private static final int</tspan> <tspan fill="#c77dbb" font-style="italic">MAX</tspan> = <tspan fill="#2aacb8">3</tspan>;</text>
+<rect x="694" y="146" width="3" height="26" fill="#549159"/>
+<text x="686" y="163" text-anchor="end" fill="#4b5059">4</text>
+<text x="702" y="163" fill="#bcbec4" xml:space="preserve">    <tspan fill="#cf8e6d">private final</tspan> String <tspan fill="#c77dbb">name</tspan> = <tspan fill="#6aab73">"World"</tspan>;</text>
+<text x="686" y="189" text-anchor="end" fill="#4b5059">5</text>
+<text x="702" y="189" fill="#bcbec4" xml:space="preserve"></text>
+<rect x="694" y="198" width="3" height="26" fill="#549159"/>
+<text x="686" y="215" text-anchor="end" fill="#4b5059">6</text>
+<text x="702" y="215" fill="#bcbec4" xml:space="preserve"><tspan fill="#5f826b" font-style="italic">    /** Greets the caller. */</tspan></text>
+<rect x="694" y="224" width="3" height="26" fill="#549159"/>
+<text x="686" y="241" text-anchor="end" fill="#4b5059">7</text>
+<text x="702" y="241" fill="#bcbec4" xml:space="preserve">    <tspan fill="#cf8e6d">public</tspan> String <tspan fill="#56a8f5">greet</tspan>(<tspan fill="#cf8e6d">int</tspan> times) {</text>
+<text x="686" y="267" text-anchor="end" fill="#4b5059">8</text>
+<text x="702" y="267" fill="#bcbec4" xml:space="preserve"><tspan fill="#7a7e85">        // </tspan><tspan fill="#8bb33d" font-style="italic">TODO: cache the result</tspan></text>
+<rect x="650" y="276" width="610" height="26" fill="#26282e"/>
+<text x="686" y="293" text-anchor="end" fill="#a1a3ab">9</text>
+<text x="702" y="293" fill="#bcbec4" xml:space="preserve">        <tspan fill="#cf8e6d">return</tspan> <tspan fill="#c77dbb">name</tspan>.<tspan fill="#f75464">re</tspan></text>
+<text x="686" y="319" text-anchor="end" fill="#4b5059">10</text>
+<text x="702" y="319" fill="#bcbec4" xml:space="preserve">    }</text>
+<text x="686" y="345" text-anchor="end" fill="#4b5059">11</text>
+<text x="702" y="345" fill="#bcbec4" xml:space="preserve">}</text>
+<rect x="882" y="280" width="2" height="18" fill="#ced0d6"/>
+<path d="M864 298 q2 -3 4 0 t4 0 t4 0 t4 0" fill="none" stroke="#f75464" stroke-width="1.3"/>
+<rect x="909" y="279" width="270" height="20" rx="4" fill="#342429"/>
+<text x="917" y="293" fill="#f75464" xml:space="preserve">■ Cannot resolve symbol &apos;re&apos;</text>
+<rect x="834" y="304" width="360" height="132" rx="8" fill="#2b2d30" stroke="#43454a"/>
+<rect x="838" y="310" width="352" height="24" rx="4" fill="#2e436e"/>
+<circle cx="852" cy="322" r="8" fill="#34485b"/>
+<text x="852" y="326" fill="#56a8f5" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="868" y="327" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">re</tspan>peat<tspan fill="#868a91">(int count)</tspan></text>
+<text x="1182" y="327" fill="#868a91" text-anchor="end" font-size="13">String</text>
+<circle cx="852" cy="346" r="8" fill="#34485b"/>
+<text x="852" y="350" fill="#56a8f5" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="868" y="351" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">re</tspan>place<tspan fill="#868a91">(char, char)</tspan></text>
+<text x="1182" y="351" fill="#868a91" text-anchor="end" font-size="13">String</text>
+<circle cx="852" cy="370" r="8" fill="#34485b"/>
+<text x="852" y="374" fill="#56a8f5" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="868" y="375" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">re</tspan>gionMatches<tspan fill="#868a91">(int, …)</tspan></text>
+<text x="1182" y="375" fill="#868a91" text-anchor="end" font-size="13">boolean</text>
+<circle cx="852" cy="394" r="8" fill="#34485b"/>
+<text x="852" y="398" fill="#56a8f5" font-size="11" font-weight="700" text-anchor="middle">m</text>
+<text x="868" y="399" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">re</tspan>solveConstantDesc<tspan fill="#868a91">(Lookup)</tspan></text>
+<text x="1182" y="399" fill="#868a91" text-anchor="end" font-size="13">String</text>
+<circle cx="852" cy="418" r="8" fill="#4d3f4f"/>
+<text x="852" y="422" fill="#c77dbb" font-size="11" font-weight="700" text-anchor="middle">f</text>
+<text x="868" y="423" fill="#bcbec4"><tspan fill="#548af7" font-weight="700">re</tspan>sult<tspan fill="#868a91"></tspan></text>
+<text x="1182" y="423" fill="#868a91" text-anchor="end" font-size="13">int</text>
+<rect x="650" y="448" width="610" height="32" fill="#2b2d30"/>
+<rect x="650" y="448" width="610" height="1" fill="#393b40"/>
+<rect x="650" y="448" width="62" height="32" fill="#548af7"/>
+<text x="666" y="469" fill="#1e1f22" font-weight="700">NOR</text>
+<text x="726" y="469" fill="#868a91" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13">greeter  ›  src  ›  <tspan fill="#bcbec4">Greeter</tspan>  ›  <tspan fill="#bcbec4">greet</tspan></text>
+<text x="1244" y="469" fill="#868a91" text-anchor="end" font-family="'Inter','SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif" font-size="13"><tspan fill="#f75464">● 1</tspan>   9:23   LF   UTF-8</text>
+</g>
+<rect x="650" y="20" width="610" height="460" rx="14" fill="none" stroke="#43454a"/>
+</svg>

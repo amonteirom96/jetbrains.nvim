@@ -1,0 +1,152 @@
+*jetbrains.txt*   The IntelliJ New UI default schemes, Dark and Light.
+
+==============================================================================
+CONTENTS                                                 *jetbrains-contents*
+
+  1. Introduction .......................... |jetbrains-introduction|
+  2. Usage ................................. |jetbrains-usage|
+  3. Configuration ......................... |jetbrains-config|
+  4. Commands .............................. |jetbrains-commands|
+  5. API ................................... |jetbrains-api|
+  6. Extras ................................ |jetbrains-extras|
+
+==============================================================================
+1. INTRODUCTION                                      *jetbrains-introduction*
+
+jetbrains.nvim ports the default editor schemes of the IntelliJ Platform's
+New UI, "Dark" and "Light", to Neovim. Every color comes from the
+intellij-community sources (expUI_darkScheme.xml, expUI_lightScheme.xml and
+the expUI theme JSON files), and the theme follows how the IDE uses them:
+
+  - function declarations are blue, calls are plain text
+    (see |jetbrains-colored_calls|)
+  - class references and variables are plain text; primitives and
+    true/false/null take the keyword color
+  - fields are purple; constants and static members are italic
+  - line comments are italic in Light only; doc comments in both
+  - unresolved references are red, unused code is gray, mutable variables
+    are underlined, misspelled words get a green wave
+  - the gutter shows added (green), modified (blue) and deleted (gray) lines
+  - the terminal uses the IDE's console palette
+
+Highlights are compiled to LuaJIT bytecode and cached, so a cached load takes
+a few milliseconds.
+
+==============================================================================
+2. USAGE                                                    *jetbrains-usage*
+
+>lua
+    require("jetbrains").setup({})   -- optional
+    vim.cmd.colorscheme("jetbrains")
+<
+                            *jetbrains* *jetbrains-light* *jetbrains-dark*
+  jetbrains         follows 'background' (or the `variant` option)
+  jetbrains-light   always Light
+  jetbrains-dark    always Dark
+
+Neovim detects the terminal background at startup. When you use `jetbrains`,
+the theme follows the terminal and switches when 'background' changes.
+
+==============================================================================
+3. CONFIGURATION                                           *jetbrains-config*
+
+Defaults:
+>lua
+    require("jetbrains").setup({
+      variant = "auto",          -- "auto" | "light" | "dark"
+      transparent = false,
+      terminal_colors = true,
+      dim_inactive = false,
+      colored_calls = false,
+      underline_mutable = true,
+      float = { solid = false },
+      styles = {
+        comments = {}, doc_comments = {}, keywords = {},
+        functions = {}, calls = {}, variables = {}, fields = {},
+        strings = {}, numbers = {}, types = {}, constants = {},
+        operators = {},
+      },
+      integrations = {
+        blink = true, dropbar = true, gitsigns = true, grug_far = true,
+        lazy = true, mason = true, mini = true,
+        semantic_tokens = true, statusline = true, treesitter = true,
+      },
+      cache = true,
+      on_colors = nil,           -- fun(colors, variant)
+      on_highlights = nil,       -- fun(hl, colors, variant)
+    })
+<
+                                                    *jetbrains-colored_calls*
+colored_calls
+    When true, function and method calls use the declaration color, as the
+    IDE does for JavaScript and TypeScript. Off by default, which matches
+    Java, Kotlin and Python.
+
+                                                *jetbrains-underline_mutable*
+underline_mutable
+    Underline variables that LSP semantic tokens mark as `mutable` or
+    `reassigned`, like the IDE's "Reassigned local variable" style.
+
+                                                           *jetbrains-styles*
+styles
+    |nvim_set_hl()| attributes merged over the IDE's own styles, e.g.
+    `styles.keywords = { bold = true }` or
+    `styles.comments = { italic = false }`.
+
+                                                        *jetbrains-on_colors*
+on_colors(colors, variant)
+    Change the palette before highlights are built. Syntax keys: `bg`, `fg`,
+    `keyword`, `string`, `number`, `comment`, `doc_comment`, `func`,
+    `field`, `annotation`, `type_param`, `tag`, `attribute`, `link`,
+    `todo`, ... UI keys: `caret_row`, `selection`, `search`, `ref`, `popup`,
+    `panel`, `list_sel`, `accent`, `match`, `muted`, ... Derived keys:
+    `calls`, `git.{add,change,delete}`, `vcs.*`,
+    `diag.{error,warn,info,hint,ok}`. See lua/jetbrains/palette.lua.
+
+                                                    *jetbrains-on_highlights*
+on_highlights(hl, colors, variant)
+    Change or add highlight groups. `hl` maps group names to
+    |nvim_set_hl()| specs, with colors as "#rrggbb" strings.
+
+The compiled cache is keyed by a hash of your options, so changes take effect
+on the next `:colorscheme`. The hash covers function bodies but not captured
+upvalues. If you change such a value, run |:JetbrainsCompile|.
+
+==============================================================================
+4. COMMANDS                                              *jetbrains-commands*
+
+                                                          *:JetbrainsCompile*
+:JetbrainsCompile       Delete and rebuild the compiled cache, then reload.
+
+                                                       *:JetbrainsClearCache*
+:JetbrainsClearCache    Delete the compiled cache.
+
+                                                           *:JetbrainsExtras*
+:JetbrainsExtras [dir]  Write the Ghostty, Kitty and Lazygit themes to [dir]
+                        (default: the plugin's `extras/` directory).
+
+==============================================================================
+5. API                                                        *jetbrains-api*
+
+require("jetbrains").setup({opts})         Configure.
+require("jetbrains").load({name})          Apply a colorscheme by name.
+require("jetbrains").colors({variant})     Return the full palette.
+require("jetbrains").highlights({variant}) Return the final highlight table.
+require("jetbrains").compile()             Same as |:JetbrainsCompile|.
+require("jetbrains").clear_cache()         Same as |:JetbrainsClearCache|.
+require("jetbrains").extras({dir})         Same as |:JetbrainsExtras|.
+
+==============================================================================
+6. EXTRAS                                                  *jetbrains-extras*
+
+extras/ghostty/jetbrains-{light,dark}
+    Copy to ~/.config/ghostty/themes/ and set:
+    `theme = light:jetbrains-light,dark:jetbrains-dark`
+
+extras/kitty/jetbrains-{light,dark}.conf
+    Copy to ~/.config/kitty/{light,dark}-theme.auto.conf.
+
+extras/lazygit/jetbrains-{light,dark}.yml
+    Merge into config.yml, or append to LG_CONFIG_FILE.
+
+ vim:tw=78:ts=8:ft=help:norl:
